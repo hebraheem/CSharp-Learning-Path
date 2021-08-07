@@ -1,0 +1,15 @@
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/bin/Debug/net5.0/CSharpTypes.deps.json
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/bin/Debug/net5.0/CSharpTypes.runtimeconfig.json
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/bin/Debug/net5.0/CSharpTypes.runtimeconfig.dev.json
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/bin/Debug/net5.0/CSharpTypes.dll
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/bin/Debug/net5.0/ref/CSharpTypes.dll
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/bin/Debug/net5.0/CSharpTypes.pdb
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/obj/Debug/net5.0/CSharpTypes.csproj.AssemblyReference.cache
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/obj/Debug/net5.0/CSharpTypes.GeneratedMSBuildEditorConfig.editorconfig
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/obj/Debug/net5.0/CSharpTypes.AssemblyInfoInputs.cache
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/obj/Debug/net5.0/CSharpTypes.AssemblyInfo.cs
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/obj/Debug/net5.0/CSharpTypes.csproj.CoreCompileInputs.cache
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/obj/Debug/net5.0/CSharpTypes.dll
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/obj/Debug/net5.0/ref/CSharpTypes.dll
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/obj/Debug/net5.0/CSharpTypes.pdb
+/Users/User/Desktop/CSharp/BLRecords/CSharpTypes/obj/Debug/net5.0/CSharpTypes.genruntimeconfig.cache
