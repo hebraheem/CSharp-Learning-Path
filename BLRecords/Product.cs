@@ -4,7 +4,7 @@ using common;
 
 namespace BLRecords
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -26,6 +26,7 @@ namespace BLRecords
         public string Description { get; set; }
         public Decimal? CurrentPrice { get; set; }
         public int? productId { get; private set; }
+        public string Log() => $"Id: {productId}: \n  Name: {ProductName} \n Description: {Description}";
         public override bool Validate()
         {
             var isValid = false;
