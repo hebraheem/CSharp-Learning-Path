@@ -19,7 +19,7 @@ namespace BLRecords
         {
             get
             {
-                return StringSpacing.FormatProductname(_productName);
+                return _productName.FormatProductname();
             }
             set => _productName = value;
         }

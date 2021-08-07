@@ -4,7 +4,8 @@ namespace common
 {
     public static class StringSpacing
     {
-        public static string FormatProductname(string source)
+        //Insert spaces before each capital letter in a string
+        public static string FormatProductname(this string source)
         {
             var result = string.Empty;
             if (!string.IsNullOrWhiteSpace(source))
