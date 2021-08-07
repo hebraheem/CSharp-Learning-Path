@@ -1,0 +1,12 @@
+/Users/User/Desktop/CSharp/BLRecords/common/bin/Debug/net5.0/common.deps.json
+/Users/User/Desktop/CSharp/BLRecords/common/bin/Debug/net5.0/common.dll
+/Users/User/Desktop/CSharp/BLRecords/common/bin/Debug/net5.0/ref/common.dll
+/Users/User/Desktop/CSharp/BLRecords/common/bin/Debug/net5.0/common.pdb
+/Users/User/Desktop/CSharp/BLRecords/common/obj/Debug/net5.0/common.csproj.AssemblyReference.cache
+/Users/User/Desktop/CSharp/BLRecords/common/obj/Debug/net5.0/common.GeneratedMSBuildEditorConfig.editorconfig
+/Users/User/Desktop/CSharp/BLRecords/common/obj/Debug/net5.0/common.AssemblyInfoInputs.cache
+/Users/User/Desktop/CSharp/BLRecords/common/obj/Debug/net5.0/common.AssemblyInfo.cs
+/Users/User/Desktop/CSharp/BLRecords/common/obj/Debug/net5.0/common.csproj.CoreCompileInputs.cache
+/Users/User/Desktop/CSharp/BLRecords/common/obj/Debug/net5.0/common.dll
+/Users/User/Desktop/CSharp/BLRecords/common/obj/Debug/net5.0/ref/common.dll
+/Users/User/Desktop/CSharp/BLRecords/common/obj/Debug/net5.0/common.pdb

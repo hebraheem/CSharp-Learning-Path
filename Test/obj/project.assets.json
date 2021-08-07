@@ -1674,11 +1674,24 @@
       "BLRecords/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "common": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/BLRecords.dll": {}
         },
         "runtime": {
           "bin/placeholder/BLRecords.dll": {}
+        }
+      },
+      "common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/common.dll": {}
         }
       }
     }
@@ -5919,14 +5932,20 @@
     },
     "BLRecords/1.0.0": {
       "type": "project",
-      "path": "../File/BLRecords.csproj",
-      "msbuildProject": "../File/BLRecords.csproj"
+      "path": "../BLRecords/BLRecords.csproj",
+      "msbuildProject": "../BLRecords/BLRecords.csproj"
+    },
+    "common/1.0.0": {
+      "type": "project",
+      "path": "../common/common.csproj",
+      "msbuildProject": "../common/common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "BLRecords >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
+      "common >= 1.0.0",
       "coverlet.collector >= 3.0.2",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
@@ -5957,8 +5976,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/User/Desktop/CSharp/BLRecords/File/BLRecords.csproj": {
-              "projectPath": "/Users/User/Desktop/CSharp/BLRecords/File/BLRecords.csproj"
+            "/Users/User/Desktop/CSharp/BLRecords/BLRecords/BLRecords.csproj": {
+              "projectPath": "/Users/User/Desktop/CSharp/BLRecords/BLRecords/BLRecords.csproj"
+            },
+            "/Users/User/Desktop/CSharp/BLRecords/common/common.csproj": {
+              "projectPath": "/Users/User/Desktop/CSharp/BLRecords/common/common.csproj"
             }
           }
         }

@@ -103,3 +103,5 @@
 /Users/User/Desktop/CSharp/BLRecords/Test/bin/Debug/net5.0/BLRecords.runtimeconfig.dev.json
 /Users/User/Desktop/CSharp/BLRecords/Test/bin/Debug/net5.0/BLRecords.dll
 /Users/User/Desktop/CSharp/BLRecords/Test/bin/Debug/net5.0/BLRecords.pdb
+/Users/User/Desktop/CSharp/BLRecords/Test/bin/Debug/net5.0/common.dll
+/Users/User/Desktop/CSharp/BLRecords/Test/bin/Debug/net5.0/common.pdb

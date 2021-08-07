@@ -10,6 +10,7 @@
         "dependencies": {
           "BLRecords": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.4",
+          "common": "1.0.0",
           "coverlet.collector": "3.0.2",
           "xunit": "2.4.1",
           "xunit.runner.visualstudio": "2.4.3"
@@ -1091,8 +1092,16 @@
       },
       "xunit.runner.visualstudio/2.4.3": {},
       "BLRecords/1.0.0": {
+        "dependencies": {
+          "common": "1.0.0"
+        },
         "runtime": {
           "BLRecords.dll": {}
+        }
+      },
+      "common/1.0.0": {
+        "runtime": {
+          "common.dll": {}
         }
       }
     }
@@ -1748,6 +1757,11 @@
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
     },
     "BLRecords/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
