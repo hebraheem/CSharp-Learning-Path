@@ -1,0 +1,15 @@
+/Users/User/Desktop/CSharp/BLRecords/LINK/bin/Debug/net5.0/LINK.deps.json
+/Users/User/Desktop/CSharp/BLRecords/LINK/bin/Debug/net5.0/LINK.runtimeconfig.json
+/Users/User/Desktop/CSharp/BLRecords/LINK/bin/Debug/net5.0/LINK.runtimeconfig.dev.json
+/Users/User/Desktop/CSharp/BLRecords/LINK/bin/Debug/net5.0/LINK.dll
+/Users/User/Desktop/CSharp/BLRecords/LINK/bin/Debug/net5.0/ref/LINK.dll
+/Users/User/Desktop/CSharp/BLRecords/LINK/bin/Debug/net5.0/LINK.pdb
+/Users/User/Desktop/CSharp/BLRecords/LINK/obj/Debug/net5.0/LINK.csproj.AssemblyReference.cache
+/Users/User/Desktop/CSharp/BLRecords/LINK/obj/Debug/net5.0/LINK.GeneratedMSBuildEditorConfig.editorconfig
+/Users/User/Desktop/CSharp/BLRecords/LINK/obj/Debug/net5.0/LINK.AssemblyInfoInputs.cache
+/Users/User/Desktop/CSharp/BLRecords/LINK/obj/Debug/net5.0/LINK.AssemblyInfo.cs
+/Users/User/Desktop/CSharp/BLRecords/LINK/obj/Debug/net5.0/LINK.csproj.CoreCompileInputs.cache
+/Users/User/Desktop/CSharp/BLRecords/LINK/obj/Debug/net5.0/LINK.dll
+/Users/User/Desktop/CSharp/BLRecords/LINK/obj/Debug/net5.0/ref/LINK.dll
+/Users/User/Desktop/CSharp/BLRecords/LINK/obj/Debug/net5.0/LINK.pdb
+/Users/User/Desktop/CSharp/BLRecords/LINK/obj/Debug/net5.0/LINK.genruntimeconfig.cache
