@@ -15,7 +15,7 @@ namespace LINK
             };
 
             // Call a sample method
-            vm.Concat();
+            vm.InnerJoint();
 
             // Display Product Collection
             foreach (var item in vm.Products)

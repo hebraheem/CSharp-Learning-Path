@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Text;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -359,6 +360,95 @@ namespace LINK
                 Products = _list1.Concat(_list2).OrderBy(_product => _product.Name).ToList();
             }
             ResultText = $"Total product: {Products.Count}";
+        }
+
+        public void InnerJoint()
+        {
+            StringBuilder sb = new StringBuilder(2048);
+            int count = 0;
+
+            if (UseQuerySyntax)
+            {
+                var query = (from _product in Products
+                             join sale in Sales on _product.ProductID equals sale.ProductID
+                             select new
+                             {
+                                 _product.ProductID,
+                                 _product.Name,
+                                 _product.StandardCost,
+                                 _product.ListPrice,
+                                 _product.Size,
+                                 sale.OrderQty,
+                                 sale.SalesOrderID,
+                                 sale.UnitPrice,
+                                 sale.LineTotal,
+                             });
+                foreach (var _item in query)
+                {
+                    count++;
+                    sb.Append($"Sales Order: {_item.SalesOrderID}");
+                    sb.AppendLine($"  ProductId: {_item.ProductID}");
+                    sb.AppendLine($"  Product Name: {_item.Name}");
+                    sb.AppendLine($"  Size: {_item.Size}");
+                    sb.AppendLine($"  Price: {_item.UnitPrice}");
+                    sb.AppendLine($"  Cost: {_item.StandardCost}");
+                    sb.AppendLine($"  Order Qty: {_item.OrderQty}");
+                    sb.AppendLine($"  Total: {_item.LineTotal}");
+                }
+            }
+            else
+            {
+                var query = Products.Join(Sales, _product => _product.ProductID, sale => sale.ProductID, (_product, sale) => new
+                {
+                    _product.ProductID,
+                    _product.Name,
+                    _product.StandardCost,
+                    _product.ListPrice,
+                    _product.Size,
+                    sale.OrderQty,
+                    sale.SalesOrderID,
+                    sale.UnitPrice,
+                    sale.LineTotal,
+                });
+                foreach (var _item in query)
+                {
+                    count++;
+                    sb.Append($"Sales Order: {_item.SalesOrderID}");
+                    sb.AppendLine($"  ProductId: {_item.ProductID}");
+                    sb.AppendLine($"  Product Name: {_item.Name}");
+                    sb.AppendLine($"  Size: {_item.Size}");
+                    sb.AppendLine($"  Price: {_item.UnitPrice}");
+                    sb.AppendLine($"  Cost: {_item.StandardCost}");
+                    sb.AppendLine($"  Order Qty: {_item.OrderQty}");
+                    sb.AppendLine($"  Total: {_item.LineTotal}");
+                }
+            }
+            ResultText = sb.ToString() + Environment.NewLine + "Total Sales: " + count.ToString();
+        }
+
+        public void GroupedJoint()
+        {
+            StringBuilder sb = new StringBuilder(2048);
+            IEnumerable<ProductSales> grouped;
+
+            if (UseQuerySyntax)
+            {
+                grouped = (from _product in Products
+                           join _sale in Sales on _product.ProductID equals _sale.ProductID into _sales
+                           select new ProductSales
+                           {
+                               Product = _product,
+                               Sales = _sales
+                           });
+            }
+            else
+            {
+                grouped = Products.GroupJoin(Sales, _product => _product.ProductID, _sale => _sale.ProductID, (_product, _sales) => new ProductSales
+                {
+                    Product = _product,
+                    Sales = _sales
+                });
+            }
         }
         #endregion
     }
