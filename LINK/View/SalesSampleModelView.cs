@@ -263,6 +263,103 @@ namespace LINK
             Products.Clear();
             ResultText = $"{value}";
         }
+
+        public void SequeceEqual()
+        {
+            ProductComparer pc = new ProductComparer();
+            var value = false;
+            List<Product> _list1 = ProductRepository.GetAll();
+            List<Product> _list2 = ProductRepository.GetAll();
+            _list1.RemoveAt(0);
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in _list1 select _product).SequenceEqual(_list2, pc);
+            }
+            else
+            {
+                value = _list1.SequenceEqual(_list2, pc);
+            }
+            Products.Clear();
+            ResultText = $"{value}";
+        }
+
+        public void Except()
+        {
+            ProductComparer pc = new ProductComparer();
+            List<Product> _list1 = ProductRepository.GetAll();
+            List<Product> _list2 = ProductRepository.GetAll();
+            _list1.RemoveAll(_product => _product.Color == "Black");
+            _list2.RemoveAll(_product => _product.ListPrice < 100);
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                Products = (from _product in _list1 select _product).Except(_list2, pc).ToList();
+            }
+            else
+            {
+                Products = _list1.Except(_list2, pc).ToList();
+            }
+            ResultText = $"Total product: {Products.Count}";
+        }
+
+        public void Intersect()
+        {
+            ProductComparer pc = new ProductComparer();
+            List<Product> _list1 = ProductRepository.GetAll();
+            List<Product> _list2 = ProductRepository.GetAll();
+            _list1.RemoveAll(_product => _product.Color == "Black");
+            _list2.RemoveAll(_product => _product.ListPrice < 100);
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                Products = (from _product in _list1 select _product).Intersect(_list2, pc).ToList();
+            }
+            else
+            {
+                Products = _list1.Intersect(_list2, pc).ToList();
+            }
+            ResultText = $"Total product: {Products.Count}";
+        }
+
+        public void Union()
+        {
+            ProductComparer pc = new ProductComparer();
+            List<Product> _list1 = ProductRepository.GetAll();
+            List<Product> _list2 = ProductRepository.GetAll();
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                Products = (from _product in _list1 select _product).Union(_list2, pc).OrderBy(_product => _product.Name).ToList();
+            }
+            else
+            {
+                Products = _list1.Union(_list2, pc).OrderBy(_product => _product.Name).ToList();
+            }
+            ResultText = $"Total product: {Products.Count}";
+        }
+
+        public void Concat()
+        {
+            ProductComparer pc = new ProductComparer();
+            List<Product> _list1 = ProductRepository.GetAll();
+            List<Product> _list2 = ProductRepository.GetAll();
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                Products = (from _product in _list1 select _product).Concat(_list2).OrderBy(_product => _product.Name).ToList();
+            }
+            else
+            {
+                Products = _list1.Concat(_list2).OrderBy(_product => _product.Name).ToList();
+            }
+            ResultText = $"Total product: {Products.Count}";
+        }
         #endregion
     }
 }

@@ -15,7 +15,7 @@ namespace LINK
             };
 
             // Call a sample method
-            vm.comparer();
+            vm.Concat();
 
             // Display Product Collection
             foreach (var item in vm.Products)
