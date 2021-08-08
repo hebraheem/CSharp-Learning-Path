@@ -11,11 +11,11 @@ namespace LINK
             SalesSampleModelView vm = new SalesSampleModelView
             {
                 // Use Query or Method Syntax?
-                UseQuerySyntax = false
+                UseQuerySyntax = true
             };
 
             // Call a sample method
-            vm.SkipWhil();
+            vm.comparer();
 
             // Display Product Collection
             foreach (var item in vm.Products)

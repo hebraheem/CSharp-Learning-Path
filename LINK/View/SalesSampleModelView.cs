@@ -156,19 +156,17 @@ namespace LINK
         /// <summary>
         /// Use SkipWhile() to move past a specified number of items from the beginning of a collection based on a true condition
         /// </summary>
-        public void SkipWhil()
+        public void SkipWhile()
         {
             if (UseQuerySyntax)
             {
                 // Query Syntax
-                Products = (from _product in Products orderby _product.Name select _product).SkipWhile(_product => _product.Name.Contains("A")).ToList();
-
+                Products = (from _product in Products orderby _product.Name select _product).SkipWhile(_product => _product.Name.ToLower().Contains("l")).ToList();
             }
             else
             {
                 // Method Syntax
-                Products = Products.OrderBy(_product => _product.Name).SkipWhile(_product => _product.Name.Contains("A")).ToList();
-
+                Products = Products.OrderBy(_product => _product.Name).SkipWhile(_product => _product.Name.ToLower().Contains("l")).ToList();
             }
 
             ResultText = $"Total Products: {Products.Count}";
@@ -206,6 +204,64 @@ namespace LINK
 
             // Clear products
             Products.Clear();
+        }
+
+        public void All()
+        {
+            bool value = false;
+            string search = " ";
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in Products select _product).All(_product => _product.Name.Contains(search));
+            }
+            else
+            {
+                //method syntax
+                value = Products.All(_product => _product.Name.Contains(search));
+            }
+            Products.Clear();
+            ResultText = $"Do all Name properties contain a {search} {value}";
+        }
+
+        public void Any()
+        {
+            bool value = false;
+            string search = "z";
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in Products select _product).Any(_product => _product.Name.Contains(search));
+            }
+            else
+            {
+                //method syntax
+                value = Products.Any(_product => _product.Name.Contains(search));
+            }
+            Products.Clear();
+            ResultText = $"Do all Name properties contain a {search} {value}";
+        }
+
+        public void comparer()
+        {
+            int Id = 744;
+            bool value = false;
+            ProductIdComparer pc = new ProductIdComparer();
+            Product _productToCompare = new Product { ProductID = Id };
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in Products select _product).Contains(_productToCompare, pc);
+            }
+            else
+            {
+                value = Products.Contains(_productToCompare, pc);
+            }
+            Products.Clear();
+            ResultText = $"{value}";
         }
         #endregion
     }
