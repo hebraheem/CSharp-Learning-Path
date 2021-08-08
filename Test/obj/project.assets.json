@@ -1693,6 +1693,16 @@
         "runtime": {
           "bin/placeholder/common.dll": {}
         }
+      },
+      "LINK/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/LINK.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LINK.dll": {}
+        }
       }
     }
   },
@@ -5939,11 +5949,17 @@
       "type": "project",
       "path": "../common/common.csproj",
       "msbuildProject": "../common/common.csproj"
+    },
+    "LINK/1.0.0": {
+      "type": "project",
+      "path": "../LINK/LINK.csproj",
+      "msbuildProject": "../LINK/LINK.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "BLRecords >= 1.0.0",
+      "LINK >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "common >= 1.0.0",
       "coverlet.collector >= 3.0.2",
@@ -5981,6 +5997,9 @@
             },
             "/Users/User/Desktop/CSharp/BLRecords/common/common.csproj": {
               "projectPath": "/Users/User/Desktop/CSharp/BLRecords/common/common.csproj"
+            },
+            "/Users/User/Desktop/CSharp/BLRecords/LINK/LINK.csproj": {
+              "projectPath": "/Users/User/Desktop/CSharp/BLRecords/LINK/LINK.csproj"
             }
           }
         }

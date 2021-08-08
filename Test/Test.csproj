@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BLRecords\BLRecords.csproj" />
     <ProjectReference Include="..\common\common.csproj" />
+    <ProjectReference Include="..\LINK\LINK.csproj" />
   </ItemGroup>
 
 </Project>

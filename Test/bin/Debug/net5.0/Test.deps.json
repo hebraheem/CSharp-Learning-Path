@@ -9,6 +9,7 @@
       "Test/1.0.0": {
         "dependencies": {
           "BLRecords": "1.0.0",
+          "LINK": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.4",
           "common": "1.0.0",
           "coverlet.collector": "3.0.2",
@@ -1103,6 +1104,11 @@
         "runtime": {
           "common.dll": {}
         }
+      },
+      "LINK/1.0.0": {
+        "runtime": {
+          "LINK.dll": {}
+        }
       }
     }
   },
@@ -1762,6 +1768,11 @@
       "sha512": ""
     },
     "common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LINK/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -446,9 +446,8 @@ namespace LINK
             }
         }
 
-        public void singleOrDefault()
+        public void singleOrDefault(int search)
         {
-            int search = 744;
             Product value;
 
             if (UseQuerySyntax)

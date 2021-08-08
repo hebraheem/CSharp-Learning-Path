@@ -21,18 +21,18 @@ namespace LINK
             StringBuilder sb = new StringBuilder(1024);
 
             sb.Append(Name);
-            sb.AppendLine($"  ID: {ProductID}");
-            sb.Append($"   Color: {Color}");
-            sb.AppendLine($"   Size: {(Size ?? "n/a")}");
-            sb.Append($"   Cost: {StandardCost:c}");
-            sb.AppendLine($"   Price: {ListPrice:c}");
+            sb.AppendLine($"    ID: {ProductID}");
+            sb.Append($"    Color: {Color}");
+            sb.AppendLine($"    Size: {(Size ?? "n/a")}");
+            sb.Append($"    Cost: {StandardCost:c}");
+            sb.AppendLine($"    Price: {ListPrice:c}");
             if (NameLength.HasValue)
             {
-                sb.AppendLine($"   Name Length: {NameLength}");
+                sb.AppendLine($"    Name Length: {NameLength}");
             }
             if (TotalSales.HasValue)
             {
-                sb.AppendLine($"   Total Sales: {TotalSales:c}");
+                sb.AppendLine($"    Total Sales: {TotalSales:c}");
             }
             return sb.ToString();
         }

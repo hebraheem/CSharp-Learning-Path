@@ -14,7 +14,7 @@ namespace LINK
             };
 
             // Call a sample method
-            vm.singleOrDefault();
+            vm.singleOrDefault(744);
 
             // Display Product Collection
             foreach (var item in vm.Products)
