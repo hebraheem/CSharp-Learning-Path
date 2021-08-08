@@ -23,5 +23,73 @@ namespace Test
             //Then
             Assert.Equal(expected, vm.ResultText);
         }
+
+
+        [Fact]
+        public void TakeTest()
+        {
+            //Given
+            SalesSampleModelView sm = new SalesSampleModelView
+            {
+                UseQuerySyntax = false
+            };
+            sm.Take();
+            //When
+            var expected = "Total Products: 5";
+            var actual = sm.ResultText;
+
+            //Then
+            Assert.Equal(expected, actual);
+        }
+        [Fact]
+        public void TakeWhitTest()
+        {
+            //Given
+            SalesSampleModelView sm = new SalesSampleModelView
+            {
+                UseQuerySyntax = false
+            };
+            sm.TakeWhile();
+            //When
+            var expected = "Total Products: 1";
+            var actual = sm.ResultText;
+
+            //Then
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void SkipTest()
+        {
+            //Given
+            SalesSampleModelView sm = new SalesSampleModelView
+            {
+                UseQuerySyntax = false
+            };
+            sm.Skip();
+            //When
+            var expected = "Total Products: 20";
+            var actual = sm.ResultText;
+
+            //Then
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void SkipWhileTest()
+        {
+            //Given
+            SalesSampleModelView sm = new SalesSampleModelView
+            {
+                UseQuerySyntax = false
+            };
+            sm.SkipWhil();
+            //When
+            var expected = "Total Products: 39";
+            var actual = sm.ResultText;
+
+            //Then
+            Assert.Equal(expected, actual);
+        }
     }
 }

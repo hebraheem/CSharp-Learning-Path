@@ -7,14 +7,15 @@ namespace LINK
         static void Main(string[] args)
         {
             // Instantiate the Samples ViewModel
-            SamplesViewModel vm = new SamplesViewModel
+            // SamplesViewModel vm = new SamplesViewModel
+            SalesSampleModelView vm = new SalesSampleModelView
             {
                 // Use Query or Method Syntax?
                 UseQuerySyntax = false
             };
 
             // Call a sample method
-            vm.singleOrDefault(744);
+            vm.SkipWhil();
 
             // Display Product Collection
             foreach (var item in vm.Products)
