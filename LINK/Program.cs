@@ -11,11 +11,11 @@ namespace LINK
             SalesSampleModelView vm = new SalesSampleModelView
             {
                 // Use Query or Method Syntax?
-                UseQuerySyntax = true
+                UseQuerySyntax = false
             };
 
             // Call a sample method
-            vm.InnerJoint();
+            vm.GroupSubQuery();
 
             // Display Product Collection
             foreach (var item in vm.Products)
