@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Drawing;
+using System.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -629,6 +630,178 @@ namespace LINK
                 }
             }
             Products.Clear();
+            ResultText = sb.ToString();
+        }
+        public void Count()
+        {
+            int value;
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in Products select _product).Count();
+            }
+            else
+            {
+                value = Products.Count();
+            }
+            Products.Clear();
+            ResultText = $"Total Product in Products: {value}";
+        }
+
+        public void CountFilter()
+        {
+            int value;
+            string search = "Red";
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in Products select _product).Count(_product => _product.Color == search);
+            }
+            else
+            {
+                value = Products.Count(_product => _product.Color == search);
+            }
+            Products.Clear();
+            ResultText = $"Total Product in Products: {value}";
+        }
+
+        public void Minimum()
+        {
+            decimal? value;
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in Products select _product.ListPrice).Min();
+            }
+            else
+            {
+                value = Products.Min(_product => _product.ListPrice);
+            }
+            Products.Clear();
+            ResultText = $"Minimum in Products: {value}";
+        }
+
+        public void Maximum()
+        {
+            decimal? value;
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in Products select _product.ListPrice).Max();
+            }
+            else
+            {
+                value = Products.Max(_product => _product.ListPrice);
+            }
+            Products.Clear();
+            ResultText = $"Minimum in Products: {value}";
+        }
+
+
+        public void Average()
+        {
+            decimal? value;
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in Products select _product.ListPrice).Average();
+            }
+            else
+            {
+                value = Products.Average(_product => _product.ListPrice);
+            }
+            Products.Clear();
+            ResultText = $"Minimum in Products: {value}";
+        }
+
+        public void Sum()
+        {
+            decimal? value;
+
+            if (UseQuerySyntax)
+            {
+                //query syntax
+                value = (from _product in Products select _product.ListPrice).Sum();
+            }
+            else
+            {
+                value = Products.Sum(_product => _product.ListPrice);
+            }
+            Products.Clear();
+            ResultText = $"Minimum in Products: {value}";
+        }
+
+        public void AggregateSum()
+        {
+            decimal? value = 0;
+
+            if (UseQuerySyntax)
+            {
+                value = (from _product in Products select _product).Aggregate(0M, (Sum, _product) => Sum += _product.ListPrice);
+            }
+            else
+            {
+                value = Products.Aggregate(0M, (sum, _product) => sum += _product.ListPrice);
+            }
+            Products.Clear();
+            ResultText = $"Total Product in Products: {value}";
+        }
+
+        public void AggregateGroup()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            if (UseQuerySyntax)
+            {
+                var stats = (from _product in Products
+                             group _product by _product.Size into sizeGroup
+                             where sizeGroup.Count() > 20
+                             select new
+                             {
+                                 Size = sizeGroup.Key,
+                                 TotalProducts = sizeGroup.Count(),
+                                 max = sizeGroup.Max(_product => _product.ListPrice),
+                                 min = sizeGroup.Min(_product => _product.ListPrice),
+                                 Average = sizeGroup.Average(_product => _product.ListPrice)
+                             } into result
+                             orderby result.Size
+                             select result);
+
+                //Loop through each size
+                foreach (var group in stats)
+                {
+                    sb.AppendLine($"Size: {group.Size} Count: {group.TotalProducts}");
+                    sb.AppendLine($"Minimum: {group.min}");
+                    sb.AppendLine($"Maximum: {group.max}");
+                    sb.AppendLine($"Average: {group.Average}");
+                }
+            }
+            else
+            {
+                var stats = Products.GroupBy(_product => _product.Size).Where(_product => _product.Count() > 20).Select(_product => new
+                {
+                    Size = _product.Key,
+                    TotalProducts = _product.Count(),
+                    max = _product.Max(_product => _product.ListPrice),
+                    min = _product.Min(_product => _product.ListPrice),
+                    Average = _product.Average(_product => _product.ListPrice)
+                }).OrderBy(_product => _product.Size).Select(_result => _result);
+
+
+                //Loop through each size
+                foreach (var group in stats)
+                {
+                    sb.AppendLine($"Size: {group.Size} Count: {group.TotalProducts}");
+                    sb.AppendLine($"Minimum: {group.min}");
+                    sb.AppendLine($"Maximum: {group.max}");
+                    sb.AppendLine($"Average: {group.Average}");
+                }
+            }
             ResultText = sb.ToString();
         }
         #endregion
