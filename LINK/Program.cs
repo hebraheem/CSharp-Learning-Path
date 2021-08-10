@@ -15,7 +15,7 @@ namespace LINK
             };
 
             // Call a sample method
-            vm.SkipWhil();
+            vm.AggregateGroup();
 
             // Display Product Collection
             foreach (var item in vm.Products)

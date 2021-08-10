@@ -83,9 +83,9 @@ namespace Test
             {
                 UseQuerySyntax = false
             };
-            sm.SkipWhil();
+            sm.SkipWhile();
             //When
-            var expected = "Total Products: 39";
+            var expected = "Total Products: 4";
             var actual = sm.ResultText;
 
             //Then
