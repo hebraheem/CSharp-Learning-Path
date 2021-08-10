@@ -1,0 +1,5 @@
+/Users/User/Desktop/CSharp/BLRecords/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.csproj.AssemblyReference.cache
+/Users/User/Desktop/CSharp/BLRecords/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.GeneratedMSBuildEditorConfig.editorconfig
+/Users/User/Desktop/CSharp/BLRecords/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.AssemblyInfoInputs.cache
+/Users/User/Desktop/CSharp/BLRecords/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.AssemblyInfo.cs
+/Users/User/Desktop/CSharp/BLRecords/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.csproj.CoreCompileInputs.cache
